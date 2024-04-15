@@ -10,17 +10,11 @@
     font-family: 'Poppins', 'Georgia';
 }
 
-body {
+body{
     background: #0e1d33;
     color: #01909e;
-    min-height: 100vh;
-    min-width: 100vh;
-    display: flex;
-    flex-direction: column;
-}
-
-.footer {
-    flex-shrink: 0;
+    overflow-y: auto;
+    overflow-x: hidden;
 }
 
 .header {
@@ -593,11 +587,13 @@ hr {
         flex-direction: column;
         align-items: center;
         padding: 0 5%;
+        overflow-x: hidden;
+        overflow-y: auto;
     }
 
     .home-img {
         margin-top: 50px;
-        width: 80%;
+        width: 60%; 
         border-width: 10%;
         outline-width: 10%;
     }
@@ -640,6 +636,8 @@ hr {
         flex-direction: column;
         align-items: center;
         padding: 0 5%;
+        overflow-x: hidden;
+        overflow-y: auto;
     }
 
     .home-img {
@@ -672,7 +670,7 @@ hr {
 }
 
 
-/*Layar Tablet Gallery*/
+/*Layar Tablet  Gallery*/
 @media only screen and (max-width: 768px) {
     .gallery-title {
         font-size: 24px;
@@ -702,14 +700,14 @@ hr {
     }
 }
 
-/*Layar Mobile Navbar dan tablet*/
+/*Layar Mobile & Tablet Navbar*/
 @media screen and (max-width: 768px) {
     .nav-content {
         position: absolute;
         right: 0;
         top: 0;
         width: 30%;
-        height: 100vh;
+        height: 100vh; 
         justify-content: space-evenly;
         flex-direction: column;
         align-items: center;
@@ -740,6 +738,8 @@ hr {
         z-index: 2;
     }
 }
+
+
 
 /*Layar Mobile Contact*/
 @media only screen and (max-width: 576px) {
