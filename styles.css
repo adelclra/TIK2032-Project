@@ -7,12 +7,20 @@
     border: none;
     outline: none;
     scroll-behavior: smooth;
-    font-family: 'Poppins', Georgia;
+    font-family: 'Poppins', 'Georgia';
 }
 
 body {
     background: #0e1d33;
     color: #01909e;
+    min-height: 100vh;
+    min-width: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.footer {
+    flex-shrink: 0;
 }
 
 .header {
@@ -56,8 +64,8 @@ body {
 .nav-content{
     display: flex;
     justify-content: space-around;
-    align-items: center; /* Untuk memusatkan vertikal */
-    flex-wrap: nowrap; /* Mencegah pembungkusan (wrap) flex item */
+    align-items: center; 
+    flex-wrap: nowrap; 
 }
 
 .nav-content a {
@@ -66,14 +74,15 @@ body {
     color: #0e1d33;
     text-decoration: none;
     background: url(background/bluebg.jpeg);
-    padding: 6px 15px; /* Menyesuaikan padding */
-    font-weight: 700;
+    padding: 6px 15px; 
     transition: .3s;
     opacity: 0;
     animation: slideTop 1s ease forwards;
     animation-delay: calc(.2s * var(--i));
     border-radius: 30px; 
-    margin-right: 10px; /* Mengurangi margin-right */
+    margin-right: 10px; 
+    font-family: 'Poppins', 'Georgia';
+    font-weight: 700;
 }
 
 .nav-content a:hover,
@@ -88,7 +97,7 @@ body {
 
 /*Menu*/
 .menu-toggle {
-    display: none; 
+    display: none;
     flex-direction: column;
     height: 20px;
     justify-content: space-between;
@@ -693,66 +702,83 @@ hr {
     }
 }
 
-/*Layar Tablet Navbar*/
+/*Layar Mobile Navbar dan tablet*/
 @media screen and (max-width: 768px) {
     .nav-content {
-        max-height: 0;
-        overflow: hidden;
-        transition: max-height 0.3s ease;
-        position: fixed;
-        top: 100%; 
-        left: 0;
-        width: 100%;
-        padding: 10px 0;
-        background-color: #0e1d33;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 30%;
+        height: 100vh;
+        justify-content: space-evenly;
+        flex-direction: column;
+        align-items: center;
+        z-index: -1;
+        transform: translateX(100%);
+        transition: all 0.5s;
+        opacity: 0;
+        align-items: center;
+        text-align: center; 
     }
 
     .nav-content.active {
-        max-height: 1000px; 
-        display: block;
+        transform: translateX(0%);
+        opacity: 1;
+        z-index: 1;
+        background: linear-gradient(to left, #0e1d33, #01909e);
+        backdrop-filter: blur(10px);
     }
-    
+
     .nav-content a {
         margin: 10px 0; 
+        text-align: center; 
+        margin-top: 90px;
     }
 
     .menu-toggle {
-        display: block; 
-        margin-right: 10px; 
+        display: flex;
+        z-index: 2;
     }
 }
 
-/*Layar Mobile Navbar*/
-@media screen and (max-width: 576px) {
-    .nav-content {
-        max-height: 0;
-        overflow: hidden;
-        transition: max-height 0.3s ease;
-        position: absolute;
-        top: 0%;
-        height: 100vh; 
-        flex-direction: column;
-        width: 100%;
-        padding: 10px 0;
-        align-items: center;
-        z-index: -1;
-        transform: translatex(100%);
-        background-color: #0e1d33;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+/*Layar Mobile Contact*/
+@media only screen and (max-width: 576px) {
+    .contact-title {
+        font-size: 24px;
     }
 
-    .nav-content.active {
-        max-height: 1000px; 
-        display: block;
+    .contact-subtitle {
+        font-size: 8px;
     }
 
-    .nav-content a {
-        margin: 10px 0; 
+    .contact-info {
+        padding: 5px;
+    }
+}
+
+/*Layar Mobile Blog*/
+@media only screen and (max-width: 576px) {
+    .blog-title1 {
+        font-size: 24px;
     }
 
-    .menu-toggle {
-        display: block; 
-        margin-right: 10px; 
+    .blog-title {
+        font-size: 20px;
+    }
+
+    .blog-title-large {
+        font-size: 16px;
+    }
+
+    .blog-post p {
+        font-size: 10px;
+    }
+
+    .blog-post img {
+        padding: 5px;
+    }
+
+    .blog-img-description {
+        font-size: 10px;
     }
 }
