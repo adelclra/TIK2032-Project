@@ -699,7 +699,7 @@ hr {
         max-height: 0;
         overflow: hidden;
         transition: max-height 0.3s ease;
-        position: absolute;
+        position: fixed;
         top: 100%; 
         left: 0;
         width: 100%;
@@ -710,6 +710,7 @@ hr {
 
     .nav-content.active {
         max-height: 1000px; 
+        display: block;
     }
     
     .nav-content a {
@@ -743,6 +744,7 @@ hr {
 
     .nav-content.active {
         max-height: 1000px; 
+        display: block;
     }
 
     .nav-content a {
