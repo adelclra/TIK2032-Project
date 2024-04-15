@@ -5,93 +5,106 @@
     <link href="favicon/apple-touch-icon.png" rel="apple-touch-icon">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog - Portofolio Adelia Langitan</title>
+    <title>Blog - Portfolio Adelia Langitan</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header class="header">
         <a href="#" class="logo">Adelia L.</a>
     
-    <nav class="nav-content">
-        <a href="index.html" style="--i:1;">Home<span></span></a>
-        <a href="gallery.html" style="--i:2;">Gallery<span></span></a>
-        <a href="blog.html" style="--i:3;" class="active">Blog<span></span></a>
-        <a href="contact.html" style="--i:4;">Contact<span></span></a>
-    </nav>
+        <div class="menu-toggle">
+            <input type="checkbox" />
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <nav class="nav-content">
+                <li><a href="index.html">Home<span></span></a></li>
+                <li><a href="gallery.html">Gallery<span></span></a></li>
+                <li><a href="blog.html" class="active">Blog<span></span></a></li>
+                <li><a href="contact.html">Contact<span></span></a></li>
+        </nav>
     </header>
-    <section class="section">
+
+    <div class="menu-toggle">
+        <input type="checkbox" />
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+    </header>
+
+    <h1 class="blog-title1">Blog</h1>
+
+    <section class="blog">
         <div class="section__container">
-                <div class="blog-post">
-                    <h2 class="blog-title">Mengenal Lebih Dekat, Anoa Breeding Centre (ABC) BPSILHK Manado</h2>
-                    <div style="display: flex;">
-                        <div style="flex: 1;">
-                            <p>
-                                BPSILHK bekerja sama dengan Balai Konservasi dan Sumber Daya Alam (BKSDA) Manado telah melaksanakan tugas dan fungsi penerapan standar perangkat lingkungan hidup dan kehutanan serta telah mengembangkan program perlindungan ekosistem Anoa yang disebut dengan UPT Anoa Breeding Center (ABC).
-                            </p>
-                            <p>
-                                Namun, bukan hal baru di Balai Besar Penerapan Standar Hukum Lingkungan Hidup dan Kehutanan Manado (BPSILHK) untuk melihat langsung, mempelajari, dan mengunjungi kawasan ex-situ yang “mirip” dengan habitat alami.
-                                Peran Anoa Breeding Center (ABC) sebagai standar konsultasi, pendidikan, ilmu pengetahuan dan teknologi, wisata edukasi, nasehat teknis, pemukiman kembali dan penyelamatan.
-                                Menurut BPSILHK Manado  Sulawesi Utara, anoa berada di ambang kepunahan akibat perburuan  manusia dan berkurangnya habitat  alami anoa akibat alih fungsi hutan menjadi kawasan pertambangan dan perkebunan.
-                                Anoa (Bubalus Depressicornis) merupakan satwa langka asli Indonesia  dan hanya dilindungi di Pulau Sulawesi.
-                                BPSILHK dan KSDA meluncurkan Pusat Penangkaran Anoa  (ABC) pada tahun 2011 dan diresmikan pada tanggal 5 Februari 2015 oleh Menteri Lingkungan Hidup dan Kehutanan Siti Nurbaya Bakar.
-                                Pada tahun 2017 hingga 2023, terdapat lima individu Anoa yang dilahirkan di Anoa Breeding Center (ABC).
-                                Sejauh ini jumlah individu Anoa yang ada sebanyak 11 ekor.
-                            </p>
-                        </div>
-                        <div style="flex: 1;">
-                            <img src="artikel/artikel1.jpeg" alt="Foto Anoa" style="max-width: 100%; height: auto;">
-                        </div>
+            <div class="blog-post">
+                <h2 class="blog-title" onclick="toggleContent(this)">Mengenal Lebih Dekat, Anoa Breeding Centre (ABC) BPSILHK Manado</h2>
+                <div class="blog-content" style="display: none;">
+                    <p>
+                    BPSILHK bekerja sama dengan Balai Konservasi dan Sumber Daya Alam (BKSDA) Manado telah melaksanakan tugas dan fungsi penerapan standar perangkat lingkungan hidup dan kehutanan serta telah mengembangkan program perlindungan ekosistem Anoa yang disebut dengan UPT Anoa Breeding Center (ABC).
+                    Namun, bukan hal baru di Balai Besar Penerapan Standar Hukum Lingkungan Hidup dan Kehutanan Manado (BPSILHK) untuk melihat langsung, mempelajari, dan mengunjungi kawasan ex-situ yang “mirip” dengan habitat alami.
+                    Peran Anoa Breeding Center (ABC) sebagai standar konsultasi, pendidikan, ilmu pengetahuan dan teknologi, wisata edukasi, nasehat teknis, pemukiman kembali dan penyelamatan.
+                    Menurut BPSILHK Manado Sulawesi Utara, anoa berada di ambang kepunahan akibat perburuan manusia dan berkurangnya habitat alami anoa akibat alih fungsi hutan menjadi kawasan pertambangan dan perkebunan.
+                    Anoa (Bubalus Depressicornis) merupakan satwa langka asli Indonesia dan hanya dilindungi di Pulau Sulawesi.
+                    BPSILHK dan KSDA meluncurkan Pusat Penangkaran Anoa (ABC) pada tahun 2011 dan diresmikan pada tanggal 5 Februari 2015 oleh Menteri Lingkungan Hidup dan Kehutanan Siti Nurbaya Bakar.
+                    Pada tahun 2017 hingga 2023, terdapat lima individu Anoa yang dilahirkan di Anoa Breeding Center (ABC).
+                    Sejauh ini jumlah individu Anoa yang ada sebanyak 11 ekor.
+                    </p>
+                    <a href="https://www.kompasiana.com/aulyamanda/65974eb912d50f5caa3e0222/mengenal-lebih-dekat-anoa-di-anoa-breeefing-centre-abc-bpsilhk-manado" style="color: #f4f4f4;">Read more..</a>
+                    <img src="artikel/artikel1.jpeg" alt="Foto Anoa" style="max-width: 100%; height: auto; display: block;" onclick="toggleDescription(this)">
+                    <div class="blog-img-description" style="display: block;">
+                        Anoa Breeding Centre (ABC) BPSILHK Manado
                     </div>
-                </div>                
-                <hr>
-                <div class="blog-post">
-                    <h2 class="blog-title">Mematikan Imajinasi: Dampak Serius Pembajakan Buku bagi Kreativitas dan Industri</h2>
-                    <div style="display: flex;">
-                        <div style="flex: 1;">
-                            <p>
-                                Banyak orang percaya bahwa buku adalah jendela dunia, tempat di mana Anda dapat mempelajari berbagai cara berpikir dan memperoleh pengetahuan.Setiap buku merupakan hasil kerja keras, pemikiran, dan kreativitas dalam perjalanan intelektual penulisnya. 
-                            </p>
-                            <p>
-                                Namun kemajuan teknologi dan kemudahan akses informasi membuat praktik pembajakan buku semakin marak. 
-                                Buku bajakan dengan mudah dijual di berbagai platform online, dan kios buku bajakan bermunculan seperti jamur di kota-kota besar. 
-                                Kurangnya kontrol pemerintah dan sikap masyarakat yang permisif, ditambah dengan sikap kapitalis para percetakan yang mencuri nilai karya orang lain, menyebabkan aksi pembajakan semakin meluas.
-                                Sebagai konsumen, kita harus bertanggung jawab atas tindakan kita dan berusaha menghormati hak cipta  penulis. Oleh karena itu, untuk menghentikan pembajakan buku dan memastikan bahwa karya penulis dihargai sebagaimana mestinya, kita harus bertobat dan berhenti membeli salinan bajakan. Melawan pembajakan buku berarti melindungi kreativitas penulis, mendukung industri buku yang sehat, dan memastikan pembaca memiliki akses yang adil dan legal terhadap karya yang mereka sukai.
-                            </p>
-                        </div>
-                        <div style="flex: 1;">
-                            <img src="artikel/artikel2.jpeg" alt="Foto Stop Buku Bajakan" style="max-width: 100%; height: auto;">
-                        </div>
-                    </div>
-                </div>                
                 </div>
-                <hr>
-                <div class="blog-post">
-                    <h2 class="blog-title">Polresta Manado Bongkar Kasus Pencurian Kabel Fiber Optik, 4 Warga Ditangkap</h2>
-                    <div style="display: flex;">
-                        <div style="flex: 1;">
-                            <p>
-                                Tim Charlie ROTR Polresta Manado mengamankan empat pria yang diduga mencuri kabel fiber optic. Para pelaku yakni  ET (32), ArM (25), ApM (30), dan AA (22), diamankan pada Minggu (3/3/2024) malam.
-                                Penangkapan para pelaku ini berdasarkan laporan dari salah seorang manajer perusahaan di Kota Manado, Sulut. kasus itu terjadi pada Selasa (27/2/2024) sekitar pukul 22.47 Wita, dan Rabu (28/2/2024) sekitar pukul 04.15 Wita.
-                            </p>
-                            <p>"Awalnya, pelapor memeriksa rekaman CCTV dan melihat kabel fiber optik dicuri pelaku yang menggunakan jaket warna hitam. Atas kejadian tersebut, pihak perusahaan mengalami kerugian sekitar Rp64 juta," ungkap Kapolresta Manado Kombes Pol Julianto Sirait melalui Kasatreskrim Kompol May Diana Sitepu, Senin (4/3/2024).
-                                Laporan yang diterima itu ditanggapi Tim Charlie ROTR Polresta Manado dengan melakukan penyelidikan. Kemudian tim mendatangi sebuah tempat yang diduga digunakan untuk menampung kabel fiber optik hasil curian.
-                                
-                                Di tempat tersebut, tim mengamankan para pelaku bersama barang bukti kabel fiber optik sepanjang kurang lebih 300 meter yang terbuka dari gulungan.
-                                "ET saat diinterogasi mengaku, ApM pernah menjual 2 gulung kabel fiber optik kepadanya," ujar Sitepu.
-                                Tim lalu melakukan pengembangan dan mengamankan ApM saat sedang mengemudikan mobil bak terbuka bersama AA. Mobil tersebut bermuatan 1 gulung kabel fiber optik yang akan dijual kepada ET. Diduga kabel tersebut dicuri ApM dan AA dari TKP atau perusahaan lainnya di wilayah Manado.
-                                "Keempat pelaku beserta barang bukti dua gulung kabel fiber optik dan dua unit mobil bak terbuka diamankan di Mapolresta Manado untuk diproses hukum lebih lanjut," ujarnya.
-                            </p>
-                        </div>
-                        <div style="flex: 1;">
-                            <img src="artikel/artikel3.png" alt="Foto Stop Buku Bajakan" style="max-width: 100%; height: auto;">
-                        </div>
+            </div>
+            <hr>
+            <div class="blog-post">
+                <h2 class="blog-title" onclick="toggleContent(this)">Mematikan Imajinasi: Dampak Serius Pembajakan Buku bagi Kreativitas dan Industri</h2>
+                <div class="blog-content" style="display: none;">
+                    <p>
+                    Banyak orang percaya bahwa buku adalah jendela dunia, tempat di mana Anda dapat mempelajari berbagai cara berpikir dan memperoleh pengetahuan.Setiap buku merupakan hasil kerja keras, pemikiran, dan kreativitas dalam perjalanan intelektual penulisnya.
+                    Namun kemajuan teknologi dan kemudahan akses informasi membuat praktik pembajakan buku semakin marak.
+                    Buku bajakan dengan mudah dijual di berbagai platform online, dan kios buku bajakan bermunculan seperti jamur di kota-kota besar.
+                    Kurangnya kontrol pemerintah dan sikap masyarakat yang permisif, ditambah dengan sikap kapitalis para percetakan yang mencuri nilai karya orang lain, menyebabkan aksi pembajakan semakin meluas.
+                    Sebagai konsumen, kita harus bertanggung jawab atas tindakan kita dan berusaha menghormati hak cipta penulis. Oleh karena itu, untuk menghentikan pembajakan buku dan memastikan bahwa karya penulis dihargai sebagaimana mestinya, kita harus bertobat dan berhenti membeli salinan bajakan. Melawan pembajakan buku berarti melindungi kreativitas penulis, mendukung industri buku yang sehat, dan memastikan pembaca memiliki akses yang adil dan legal terhadap karya yang mereka sukai.
+                    </p>
+                    <a href="https://www.kompasiana.com/hen12684/65fe339bc57afb3b0a3833b3/mematikan-imajinasi-dampak-serius-pembajakan-buku-bagi-kreativitas-dan-industri" style="color: #f4f4f4;">Read more..</a>
+                    <img src="artikel/artikel2.jpeg" alt="Foto Stop Buku Bajakan" style="max-width: 100%; height: auto; display: block;" onclick="toggleDescription(this)">
+                    <div class="blog-img-description" style="display: block;">
+                        Stop Buku Bajakan
                     </div>
-                </div>                
                 </div>
-                <hr>
+            </div>
+            <hr>
+            <div class="blog-post">
+                <h2 class="blog-title" onclick="toggleContent(this)">Polresta Manado Bongkar Kasus Pencurian Kabel Fiber Optik, 4 Warga Ditangkap</h2>
+                <div class="blog-content" style="display: none;">
+                    <p>
+                    Tim Charlie ROTR Polresta Manado mengamankan empat pria yang diduga mencuri kabel fiber optic. Para pelaku yakni ET (32), ArM (25), ApM (30), dan AA (22), diamankan pada Minggu (3/3/2024) malam.
+                    Penangkapan para pelaku ini berdasarkan laporan dari salah seorang manajer perusahaan di Kota Manado, Sulut. kasus itu terjadi pada Selasa (27/2/2024) sekitar pukul 22.47 Wita, dan Rabu (28/2/2024) sekitar pukul 04.15 Wita.
+                    Laporan yang diterima itu ditanggapi Tim Charlie ROTR Polresta Manado dengan melakukan penyelidikan. Kemudian tim mendatangi sebuah tempat yang diduga digunakan untuk menampung kabel fiber optik hasil curian.
+                    Di tempat tersebut, tim mengamankan para pelaku bersama barang bukti kabel fiber optik sepanjang kurang lebih 300 meter yang terbuka dari gulungan.
+                    "ET saat diinterogasi mengaku, ApM pernah menjual 2 gulung kabel fiber optik kepadanya," ujar Sitepu.
+                    </p>
+                    <a href="https://www.liputan6.com/regional/read/5542617/polresta-manado-bongkar-kasus-pencurian-kabel-fiber-optik-4-warga-ditangkap" style="color: #f4f4f4;">Read more..</a>
+                    <img src="artikel/artikel3.png" alt="Foto Stop Buku Bajakan" style="max-width: 100%; height: auto; display: block;" onclick="toggleDescription(this)">
+                    <div class="blog-img-description" style="display: block;">
+                        Polresta Manado Bongkar Kasus Pencurian Kabel Fiber Optik
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
-    <footer class="footer">
-        <p>&copy; 2024 Portofolio Adelia Langitan | All rights reserved</p>
+            </div>
+        </div>
+    </section>
+    
+    <footer class="blog-footer">
+        <p>&copy; Adelia Langitan | All rights reserved</p>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
