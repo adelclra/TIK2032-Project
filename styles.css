@@ -618,6 +618,10 @@ hr {
     .footer {
         margin-top: 10px;
     }
+
+    body {
+        overflow-x: hidden;
+    }
 }
 
 /*Layar Mobile Home*/
@@ -667,6 +671,10 @@ hr {
     .footer {
         margin-top: 10px;
     }
+
+    body {
+        overflow-x: hidden;
+    }
 }
 
 
@@ -683,6 +691,10 @@ hr {
     .image-description {
         font-size: 10px;
     }
+
+    body {
+        overflow-x: hidden;
+    }
 }
 
 /*Layar Mobile Gallery*/
@@ -697,6 +709,10 @@ hr {
 
     .image-description {
         font-size: 10px;
+    }
+
+    body {
+        overflow-x: hidden;
     }
 }
 
@@ -740,7 +756,6 @@ hr {
 }
 
 
-
 /*Layar Mobile Contact*/
 @media only screen and (max-width: 576px) {
     .contact-title {
@@ -753,6 +768,24 @@ hr {
 
     .contact-info {
         padding: 5px;
+    }
+
+    body {
+        overflow-x: hidden;
+    }
+
+    .contact-footer {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #f4f4f4;
+        height: 100px;
+        padding: 20px 50px;
+        flex-direction: column;
     }
 }
 
@@ -780,5 +813,9 @@ hr {
 
     .blog-img-description {
         font-size: 10px;
+    }
+
+    body {
+        overflow-x: hidden;
     }
 }
