@@ -147,6 +147,7 @@ body{
     justify-content: space-between;
     align-items: center;
     padding: 0 10%;
+    overflow-x: hidden;
 }
 
 .home-img {
@@ -297,6 +298,7 @@ img {
     padding: 20px;
     margin-top: 20px; 
     background: linear-gradient(-90deg, #0e1d33 65%, #01909e);
+    overflow-x: hidden;
 }
 
 .image-container {
@@ -358,6 +360,7 @@ img {
 /* BLOG */
 .blog {
     background: linear-gradient(-90deg, #0e1d33 65%, #01909e);
+    overflow-x: hidden;
 }
 
 .blog-post p {
@@ -472,6 +475,7 @@ img {
     padding: 20px;
     margin-top: 20px; 
     height: 490px;
+    overflow-x: hidden;
 }
 
 .contact-title {
