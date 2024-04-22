@@ -470,6 +470,7 @@ img {
     align-items: center;
     padding: 20px;
     margin-top: 20px; 
+    height: 490px;
     overflow-x: hidden;
 }
 
@@ -675,54 +676,15 @@ hr {
 }
 
 
-/* Layar Tablet & Layar Mobile Gallery */
+/*Layar Tablet  Gallery*/
 @media only screen and (max-width: 768px) {
-    .header {
-        padding: 20px;
-    }
-
     .gallery-title {
         font-size: 24px;
     }
 
     .image-container {
-        width: calc(50% - 20px);
-        margin: 10px; 
-    }
-
-    .image-description {
-        font-size: 10px;
-    }
-
-    .gallery {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        align-items: center; 
-        margin-top: 20px; 
-        background: linear-gradient(-90deg, #0e1d33 65%, #01909e);
-        overflow-x: hidden;
-        padding: 0; 
-    }
-
-    .footer {
-        margin-top: 10px;
-    }
-}
-
-/* Layar Mobile Gallery */
-@media only screen and (max-width: 576px) {
-    .header {
-        padding: 20px;
-    }
-
-    .gallery-title {
-        font-size: 24px;
-    }
-
-    .image-container {
-        width: calc(100% - 20px); 
-        margin: 10px; 
+        width: 100%;
+        border-radius: 0;
     }
 
     .image-description {
@@ -732,12 +694,26 @@ hr {
     body {
         overflow-x: hidden;
     }
-
-    .footer {
-        margin-top: 10px;
-    }
 }
 
+/*Layar Mobile Gallery*/
+@media only screen and (max-width: 576px) {
+    .gallery-title {
+        font-size: 24px;
+    }
+
+    .image-container {
+        width: 100%;
+    }
+
+    .image-description {
+        font-size: 10px;
+    }
+
+    body {
+        overflow-x: hidden;
+    }
+}
 
 /*Layar Mobile & Tablet Navbar*/
 @media screen and (max-width: 768px) {
@@ -756,6 +732,7 @@ hr {
         opacity: 0;
         align-items: center;
         text-align: center; 
+        overflow-y: auto; 
     }
 
     .nav-content.active {
@@ -795,10 +772,21 @@ hr {
 
     body {
         overflow-x: hidden;
+        overflow-y: scroll;
     }
 
-    .footer {
-        margin-top: 10px;
+    .contact-footer {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #f4f4f4;
+        height: 100px;
+        padding: 20px 50px;
+        flex-direction: column;
     }
 }
 
@@ -831,9 +819,4 @@ hr {
     body {
         overflow-x: hidden;
     }
-
-    .footer {
-        margin-top: 10px;
-    }
-
 }
