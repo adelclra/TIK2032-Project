@@ -299,7 +299,6 @@ img {
     margin-top: 20px; 
     background: linear-gradient(-90deg, #0e1d33 65%, #01909e);
     overflow-x: hidden;
-    overflow-y: scroll;
 }
 
 .image-container {
@@ -346,11 +345,13 @@ img {
 
 .gallery-footer {
     position: relative;
+    bottom: 0;
+    left: 0;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     color: #f4f4f4;
-    width: 100%;
     height: 100px;
     padding: 20px 50px;
     flex-direction: column;
@@ -411,11 +412,13 @@ img {
 
 .blog-footer {
     position: relative;
+    bottom: 0;
+    left: 0;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     color: #f4f4f4;
-    width: 100%;
     height: 100px;
     padding: 20px 50px;
     flex-direction: column;
@@ -687,7 +690,6 @@ hr {
 
     .image-container {
         width: 100%;
-        border-radius: 0;
     }
 
     .image-description {
@@ -735,7 +737,6 @@ hr {
         opacity: 0;
         align-items: center;
         text-align: center; 
-        overflow-y: auto; 
     }
 
     .nav-content.active {
@@ -775,7 +776,6 @@ hr {
 
     body {
         overflow-x: hidden;
-        overflow-y: scroll;
     }
 
     .contact-footer {
